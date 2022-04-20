@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/stud/work/SSA/lab2/build",
+  "command": "/usr/bin/g++  -DPOCO_ENABLE_CPP11 -DPOCO_ENABLE_CPP14 -DPOCO_HAVE_FD_EPOLL -DPOCO_OS_FAMILY_UNIX -DXML_DTD -D_DEBUG -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D_THREAD_SAFE -D_XOPEN_SOURCE=500 -I/usr/include/mysql -I/usr/local/include/mysql -I/home/stud/work/SSA/lab2/build  -g   -std=gnu++17 -o CMakeFiles/googletest.dir/googletest.cpp.o -c /home/stud/work/SSA/lab2/googletest.cpp",
+  "file": "/home/stud/work/SSA/lab2/googletest.cpp"
+},
+{
+  "directory": "/home/stud/work/SSA/lab2/build",
+  "command": "/usr/bin/g++  -DPOCO_ENABLE_CPP11 -DPOCO_ENABLE_CPP14 -DPOCO_HAVE_FD_EPOLL -DPOCO_OS_FAMILY_UNIX -DXML_DTD -D_DEBUG -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D_THREAD_SAFE -D_XOPEN_SOURCE=500 -I/usr/include/mysql -I/usr/local/include/mysql -I/home/stud/work/SSA/lab2/build  -g   -std=gnu++17 -o CMakeFiles/pocoserver.dir/pocoserver.cpp.o -c /home/stud/work/SSA/lab2/pocoserver.cpp",
+  "file": "/home/stud/work/SSA/lab2/pocoserver.cpp"
+}
+]

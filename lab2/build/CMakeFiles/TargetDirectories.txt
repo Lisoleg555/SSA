@@ -1,0 +1,4 @@
+/home/stud/work/SSA/lab2/build/CMakeFiles/rebuild_cache.dir
+/home/stud/work/SSA/lab2/build/CMakeFiles/edit_cache.dir
+/home/stud/work/SSA/lab2/build/CMakeFiles/googletest.dir
+/home/stud/work/SSA/lab2/build/CMakeFiles/pocoserver.dir

@@ -1,0 +1,252 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "pocoserver"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"link_directories",
+			"target_link_libraries",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "POCO_ENABLE_CPP11"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "POCO_ENABLE_CPP14"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "POCO_HAVE_FD_EPOLL"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "POCO_OS_FAMILY_UNIX"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "XML_DTD"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_DEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_LARGEFILE64_SOURCE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_REENTRANT"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_THREAD_SAFE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_XOPEN_SOURCE=500"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/usr/include/mysql"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/usr/local/include/mysql"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/stud/work/SSA/lab2/build"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "pocoserver::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/usr/local/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/usr/local/lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libPocoUtil.so.81",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libPocoNet.so.81",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libPocoXML.so.81",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libPocoJSON.so.81",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lPocoData",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lPocoDataMySQL",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmysqlclient",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libPocoFoundation.so.81",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "pocoserver",
+	"nameOnDisk" : "pocoserver",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "pocoserver.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
