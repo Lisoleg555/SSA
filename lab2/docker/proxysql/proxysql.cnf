@@ -23,8 +23,8 @@ mysql_variables=
     interfaces="0.0.0.0:6033"
     default_schema="information_schema"
     server_version="8.0.17 (ProxySQL)"
-    monitor_username="stud1"
-    monitor_password="stud"
+    monitor_username="test"
+    monitor_password="pzjqUkMnc7vfNHET"
     monitor_ping_interval=10000
 }
 
@@ -60,8 +60,8 @@ mysql_servers =
 mysql_users:
 (
     {
-    	username = "stud1"
-    	password = "stud"
+    	username = "test"
+    	password = "pzjqUkMnc7vfNHET"
     	default_hostgroup = 0
     	max_connections=200
     	default_schema="information_schema"

@@ -39,11 +39,11 @@ typedef struct TPerson {
 } Person;
 
 namespace NConnect {
-    const std::string host = "localhost";//
+    const std::string host = "127.0.0.1";//
           std::string ip   = "";//
-    const std::string log  = "stud1";//
-    const std::string db   = "PeopleShard";//
-    const std::string pass = "stud";//
+    const std::string log  = "test";//
+    const std::string db   = "sql_test";//
+    const std::string pass = "pzjqUkMnc7vfNHET";//
     const int port         = 8080;//
     const int portDb       = 6033;//
     const int shardCount   = 3;//
