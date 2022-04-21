@@ -1,16 +1,16 @@
 version: '3.3'
 
 services:
-  db-node-1:
+  shard1:
     build:
       context: mysql
       dockerfile: Dockerfile
-    container_name: db-node-1
+    container_name: shard1
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: sql_test
-      MYSQL_USER: test
-      MYSQL_PASSWORD: pzjqUkMnc7vfNHET
+      MYSQL_DATABASE: 'PeopleShard'
+      MYSQL_USER: 'stud1'
+      MYSQL_PASSWORD: 'stud'
       MYSQL_ROOT_PASSWORD: '1'
     command: >
       --sql-mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
@@ -21,18 +21,18 @@ services:
     ports:
       - 3360:3306
     volumes:
-      - db-node-1-data:/var/lib/mysql
+      - shard1-data:/var/lib/mysql
 
-  db-node-2:
+  shard2:
     build:
       context: mysql
       dockerfile: Dockerfile
-    container_name: db-node-2
+    container_name: shard2
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: sql_test
-      MYSQL_USER: test
-      MYSQL_PASSWORD: pzjqUkMnc7vfNHET
+      MYSQL_DATABASE: 'PeopleShard'
+      MYSQL_USER: 'stud1'
+      MYSQL_PASSWORD: 'stud'
       MYSQL_ROOT_PASSWORD: '1'
     command: >
       --sql-mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
@@ -43,39 +43,16 @@ services:
     ports:
       - 3361:3306
     volumes:
-      - db-node-2-data:/var/lib/mysql
-
-  db-node-3:
-    build:
-      context: mysql
-      dockerfile: Dockerfile
-    container_name: db-node-3
-    restart: unless-stopped
-    environment:
-      MYSQL_DATABASE: sql_test
-      MYSQL_USER: test
-      MYSQL_PASSWORD: pzjqUkMnc7vfNHET
-      MYSQL_ROOT_PASSWORD: '1'
-    command: >
-      --sql-mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
-      --general-log=ON
-      --log-queries-not-using-indexes=ON
-    networks:
-      - mai-network
-    ports:
-      - 3362:3306
-    volumes:
-      - db-node-3-data:/var/lib/mysql
-      
+      - shard2-data:/var/lib/mysql
+  
   proxysql:
     build:
       context: proxysql
       dockerfile: Dockerfile
     container_name: proxysql
     depends_on:
-      - "db-node-1"
-      - "db-node-2"
-      - "db-node-3"
+      - "shard1"
+      - "shard2"
     command: >
       --initial
     volumes:
@@ -83,15 +60,12 @@ services:
     networks:
       - mai-network
     ports:
-      # Mysql Client Port
       - "6033:6033"
-      # Mysql Admin Port
       - "6032:6032"
 
 volumes:
-  db-node-1-data:
-  db-node-2-data:
-  db-node-3-data:
+  shard1-data:
+  shard2-data:
   proxysql-data:
 
 networks:

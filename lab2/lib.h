@@ -1,24 +1,37 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
-#include <memory>//
-#include <functional>//
-#include <thread>//
-#include <sstream>//
-#include <map> //
-#include <algorithm>//
+#include <stdio.h>
+#include <fstream>
+#include <memory>
+#include <exception>
+#include <thread>
+#include <sstream>
+#include <map> 
+#include <functional>
+#include <algorithm>
 
 #include "Poco/Exception.h"
 #include "Poco/StreamCopier.h"
 #include "Poco/JSON/Object.h"
+#include "Poco/Thread.h"
+#include "Poco/ThreadPool.h"
+#include "Poco/Runnable.h"
+#include "Poco/DateTimeFormat.h"
+#include "Poco/DateTimeFormatter.h"
+#include "Poco/Timestamp.h"
 
 #include <Poco/Data/RecordSet.h>
+#include <Poco/Data/Session.h>
 #include <Poco/Data/SessionFactory.h>
 #include <Poco/Data/MySQL/Connector.h>
 #include <Poco/Data/MySQL/MySQLException.h>
+#include <Poco/Data/Statement.h>
+
 #include "Poco/Util/ServerApplication.h"
+#include "Poco/Util/Option.h"
 #include "Poco/Util/OptionSet.h"
+#include "Poco/Util/HelpFormatter.h"
 
 #include "Poco/Net/HTTPServerParams.h"
 #include "Poco/Net/HTTPServerRequest.h"
@@ -39,14 +52,14 @@ typedef struct TPerson {
 } Person;
 
 namespace NConnect {
-    const std::string host = "127.0.0.1";//
-          std::string ip   = "";//
-    const std::string log  = "test";//
-    const std::string db   = "sql_test";//
-    const std::string pass = "pzjqUkMnc7vfNHET";//
-    const int port         = 8080;//
-    const int portDb       = 6033;//
-    const int shardCount   = 3;//
+    const std::string host = "127.0.0.1";
+    std::string ip   = "";
+    const std::string log  = "stud1";
+    const std::string db   = "PeopleShard";
+    const std::string pass = "stud";
+    const int port   = 8080;
+    const int dbPort = 6033;
+    const int shards = 2;
 }
 
 namespace NHtml {

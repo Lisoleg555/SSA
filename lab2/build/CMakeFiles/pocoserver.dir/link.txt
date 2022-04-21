@@ -1,1 +1,0 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/pocoserver.dir/pocoserver.cpp.o  -o pocoserver   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libPocoUtil.so.81 /usr/local/lib/libPocoNet.so.81 /usr/local/lib/libPocoXML.so.81 /usr/local/lib/libPocoJSON.so.81 -lPocoData -lPocoDataMySQL -lmysqlclient /usr/local/lib/libPocoFoundation.so.81 -lpthread -ldl -lrt 
