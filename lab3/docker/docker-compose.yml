@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  apache1:
+      image: apacheignite/ignite
+      container_name: apache1
+      ports:
+          - "10800:10800"
+
+  apache2:
+      image: apacheignite/ignite
+      container_name: apache2
+      ports:
+            - "10900:10800"
